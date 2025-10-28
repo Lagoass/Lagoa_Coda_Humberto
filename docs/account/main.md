@@ -189,5 +189,3 @@ api/
 ```{ bash }
 > mvn clean package spring-boot:run
 ```
-
-Posso te ajudar a reformular a documentação de outros módulos ou a criar um padrão de documentação para o seu projeto?
