@@ -1,19 +1,19 @@
-# Módulo de Contas (Account API)
+# 🗃️ Módulo de Contas (Account API)
 
 O serviço **Account API** é o pilar para o gerenciamento de contas de usuário dentro do domínio de e-commerce (`store`).
 
 Este microsserviço realiza todas as **operações CRUD** (Criar, Ler, Atualizar, Excluir) essenciais para a **gestão de contas**, estabelecendo a fundação necessária para a **autenticação** e o relacionamento com outros serviços do ecossistema, como `auth`, `order` e `product`.
 
-  * **Criação** (Cadastro)
-  * **Busca** (Consulta)
-  * **Atualização**
-  * **Exclusão**
+* **Criação** (Cadastro)
+* **Busca** (Consulta)
+* **Atualização**
+* **Exclusão**
 
 > 🔒 **Camada de Confiança (*Trusted Layer*) e Roteamento Seguro**
 >
 > Todas as comunicações externas passam obrigatoriamente pelo **Gateway** da aplicação. As rotas sob `/account/**` são **protegidas por *token***, exigindo o envio do cabeçalho de autenticação: `Authorization: Bearer <jwt>`.
 
------
+---
 
 ## 🏛️ Componentes e Estrutura
 
@@ -26,12 +26,12 @@ A Account API é dividida em dois submódulos principais, garantindo a separaç�
 
 ```mermaid
 flowchart TD
-    A[account: Contrato e DTOs] --> B{account-service: Lógica de Negócio};
-    B --> C[JPA: Persistência];
-    B --> D[Flyway: Migrações de DB];
-    E[Outros Módulos] --> A;
-    A -- Contrato (DTOs/Feign) --> B;
-```
+    A[account: Contrato e DTOs] --> B{account-service: Lógica de Negócio};
+    B --> C[JPA: Persistência];
+    B --> D[Flyway: Migrações de DB];
+    E[Outros Módulos] --> A;
+    A -- Contrato (DTOs/Feign) --> B;
+````
 
 -----
 
@@ -41,9 +41,9 @@ A comunicação com a API segue um fluxo de segurança e processamento em camada
 
 ```mermaid
 graph TD
-    internet[🌍 Internet] --> gateway{🛡️ Gateway};
-    gateway --> accountService[⚙️ account-service];
-    accountService --> db[💾 Database (JPA/Flyway)];
+    internet[🌍 Internet] --> gateway{🛡️ Gateway};
+    gateway --> accountService[⚙️ account-service];
+    accountService --> db[💾 Database (JPA/Flyway)];
 ```
 
 ## 📂 Módulo de Contrato (account)
@@ -52,40 +52,49 @@ Este módulo expõe a interface e os Data Transfer Objects (DTOs) para os consum
 
 ```tree
 api/
-    account/
-        src/
-            main/
-                java/
-                    store/
-                        account/
-                            AccountController.java
-                            AccountIn.java
-                            AccountOut.java
-        pom.xml
-        Jenkinsfile
+    account/
+        src/
+            main/
+                java/
+                    store/
+                        account/
+                            AccountController.java
+                            AccountIn.java
+                            AccountOut.java
+        pom.xml
+        Jenkinsfile
 ```
 
 ??? info "Source"
+\=== "pom.xml"
 
-    === "pom.xml"
+```{ .xml .copy .select linenums='1' title="pom.xml" }
+--8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/pom.xml"
+```
 
-        `{ .yaml .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/pom.xml"        `
+\=== "Jenkinsfile"
 
-    === "Jenkinsfile"
+```{ .jenkinsfile .copy .select linenums='1' title="Jenkinsfile" }
+--8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/Jenkinsfile"
+```
 
-        `{ .jenkinsfile .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/Jenkinsfile"        `
+\=== "AccountController"
 
-    === "AccountController"
+```{ .java .copy .select linenums='1' title='AccountController.java' }
+--8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/src/main/java/store/account/AccountController.java"
+```
 
-        `{ .java title='AccountController.java' .copy .select linenums='1' }         --8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/src/main/java/store/account/AccountController.java"        `
+\=== "AccountIn"
 
-    === "AccountIn"
+```{ .java .copy .select linenums='1' title='AccountIn.java' }
+--8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/src/main/java/store/account/AccountIn.java"
+```
 
-        `{ .java title='AccountIn.java' .copy .select linenums='1' }         --8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/src/main/java/store/account/AccountIn.java"        `
+\=== "AccountOut"
 
-    === "AccountOut"
-
-        `{ .java title='AccountOut.java' .copy .select linenums='1' }         --8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/src/main/java/store/account/AccountOut.java"        `
+```{ .java .copy .select linenums='1' title='AccountOut.java' }
+--8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/src/main/java/store/account/AccountOut.java"
+```
 
 ```{ bash }
 > mvn clean install
@@ -97,94 +106,124 @@ Onde a lógica de negócio e a persistência de dados são implementadas.
 
 ```tree
 api/
-    account-service/
-        k8s/
-            k8s.yaml
-        src/
-            main/
-                java/
-                    store/
-                        account/
-                            Account.java
-                            AccountApplication.java
-                            AccountModel.java
-                            AccountParser.java
-                            AccountRepository.java
-                            AccountResource.java
-                            AccountService.java
-                resources/
-                    application.yaml
-                    db/
-                        migration/
-                            V2025.08.29.001__create_schema.sql
-                            V2025.08.29.002__create_table_account.sql
-                            V2025.09.02.001__create_index_email.sql
-        pom.xml
-        Dockerfile
-        Jenkinsfile
+    account-service/
+        k8s/
+            k8s.yaml
+        src/
+            main/
+                java/
+                    store/
+                        account/
+                            Account.java
+                            AccountApplication.java
+                            AccountModel.java
+                            AccountParser.java
+                            AccountRepository.java
+                            AccountResource.java
+                            AccountService.java
+                resources/
+                    application.yaml
+                    db/
+                        migration/
+                            V2025.08.29.001__create_schema.sql
+                            V2025.08.29.002__create_table_account.sql
+                            V2025.09.02.001__create_index_email.sql
+        pom.xml
+        Dockerfile
+        Jenkinsfile
 ```
 
 ??? info "Source"
 
-    === "pom.xml"
+\=== "pom.xml"
 
-        `{ .yaml .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/pom.xml"        `
+```{ .xml .copy .select linenums='1' title="pom.xml" }
+--8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/pom.xml"
+```
 
-    === "Dockerfile"
+\=== "Dockerfile"
 
-        `{ .dockerfile .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/DockerFile"        `
+```{ .dockerfile .copy .select linenums='1' title="Dockerfile" }
+--8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/DockerFile"
+```
 
-    === "Jenkinsfile"
+\=== "Jenkinsfile"
 
-        `{ .jenkinsfile .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/Jenkinsfile"        `
+```{ .jenkinsfile .copy .select linenums='1' title="Jenkinsfile" }
+--8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/Jenkinsfile"
+```
 
-    === "k8s.yaml"
+\=== "k8s.yaml"
 
-        `{ .yaml .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/k8s/k8s.yaml"        `
+```{ .yaml .copy .select linenums='1' title="k8s.yaml" }
+--8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/k8s/k8s.yaml"
+```
 
-    === "application.yaml"
+\=== "application.yaml"
 
-        `{ .yaml .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/resources/application.yaml"        `
+```{ .yaml .copy .select linenums='1' title="application.yaml" }
+--8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/resources/application.yaml"
+```
 
-    === "Account.java"
+\=== "Account.java"
 
-        `{ .java .copy .select linenums='1' }         --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/Account.java"        `
+```{ .java .copy .select linenums='1' title="Account.java" }
+--8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/Account.java"
+```
 
-    === "AccountApplication.java"
+\=== "AccountApplication.java"
 
-        `{ .java .copy .select linenums='1' }         --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/AccountApplication.java"        `
+```{ .java .copy .select linenums='1' title="AccountApplication.java" }
+--8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/AccountApplication.java"
+```
 
-    === "AccountModel.java"
+\=== "AccountModel.java"
 
-        `{ .java .copy .select linenums='1' }         --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/AccountModel.java"        `
+```{ .java .copy .select linenums='1' title="AccountModel.java" }
+--8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/AccountModel.java"
+```
 
-    === "AccountParser.java"
+\=== "AccountParser.java"
 
-        `{ .java .copy .select linenums='1' }         --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/AccountParser.java"        `
+```{ .java .copy .select linenums='1' title="AccountParser.java" }
+--8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/AccountParser.java"
+```
 
-    === "AccountRepository.java"
+\=== "AccountRepository.java"
 
-        `{ .java .copy .select linenums='1' }         --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/AccountRepository.java"        `
+```{ .java .copy .select linenums='1' title="AccountRepository.java" }
+--8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/AccountRepository.java"
+```
 
-    === "AccountResource.java"
+\=== "AccountResource.java"
 
-        `{ .java .copy .select linenums='1' }         --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/AccountResource.java"        `
+```{ .java .copy .select linenums='1' title="AccountResource.java" }
+--8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/AccountResource.java"
+```
 
-    === "AccountService.java"
+\=== "AccountService.java"
 
-        `{ .java .copy .select linenums='1' }         --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/AccountService.java"        `
+```{ .java .copy .select linenums='1' title="AccountService.java" }
+--8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/AccountService.java"
+```
 
-    === "V2025.08.29.001\_\_create\_schema.sql"
+\=== "V2025.08.29.001\_\_create\_schema.sql"
 
-        `{ .sql .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/resources/db/migration/V2025.08.29.001__create_schema.sql"        `
+```{ .sql .copy .select linenums='1' title="V2025.08.29.001__create_schema.sql" }
+--8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/resources/db/migration/V2025.08.29.001__create_schema.sql"
+```
 
-    === "V2025.08.29.002\_\_create\_table\_account.sql"
+\=== "V2025.08.29.002\_\_create\_table\_account.sql"
 
-        `{ .sql .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/resources/db/migration/V2025.08.29.002__create_table_account.sql"        `
+```{ .sql .copy .select linenums='1' title="V2025.08.29.002__create_table_account.sql" }
+--8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/resources/db/migration/V2025.08.29.002__create_table_account.sql"
+```
 
-    === "V2025.09.02.001\_\_create\_index\_email.sql"
+\=== "V2025.09.02.001\_\_create\_index\_email.sql"
 
-        `{ .sql .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/resources/db/migration/V2025.09.02.001__create_index_email.sql"        `
+```{ .sql .copy .select linenums='1' title="V2025.09.02.001__create_index_email.sql" }
+--8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/resources/db/migration/V2025.09.02.001__create_index_email.sql"
+```
 
 ```{ bash }
 > mvn clean package spring-boot:run
