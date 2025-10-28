@@ -83,45 +83,14 @@ api/
         Jenkinsfile
 ```
 
-??? info "Source"
-
-````
-=== "pom.xml"
-
-    ``` { .yaml .copy .select linenums="1" }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/auth/refs/heads/main/pom.xml"
-    ```
-
-=== "Jenkinsfile"
-
-    ``` { .jenkinsfile .copy .select linenums="1" }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/auth/refs/heads/main/Jenkinsfile"
-    ```
-
-=== "AuthController.java"
-
-    ``` { .java title='AuthController.java' .copy .select linenums='1' }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/auth/refs/heads/main/src/main/java/store/auth/AuthController.java"
-    ```
-
-=== "LoginIn.java"
-
-    ``` { .java title='LoginIn.java' .copy .select linenums='1' }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/auth/refs/heads/main/src/main/java/store/auth/LoginIn.java"
-    ```
-
-=== "RegisterIn.java"
-
-    ``` { .java title='RegisterIn.java' .copy .select linenums='1' }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/auth/refs/heads/main/src/main/java/store/auth/RegisterIn.java"
-    ```
-
-=== "TokenOut.java"
-
-    ``` { .java title='TokenOut.java' .copy .select linenums='1' }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/auth/refs/heads/main/src/main/java/store/auth/TokenOut.java"
-    ```
-````
+| Arquivo | Descrição | Link |
+| :--- | :--- | :--- |
+| **pom.xml** | Configuração do Maven para o módulo de contrato | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/auth/refs/heads/main/pom.xml) |
+| **Jenkinsfile** | Pipeline de CI/CD do módulo de contrato | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/auth/refs/heads/main/Jenkinsfile) |
+| **AuthController.java** | Interface Feign para comunicação de autenticação | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/auth/refs/heads/main/src/main/java/store/auth/AuthController.java) |
+| **LoginIn.java** | DTO de entrada para login | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/auth/refs/heads/main/src/main/java/store/auth/LoginIn.java) |
+| **RegisterIn.java** | DTO de entrada para registro de usuário | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/auth/refs/heads/main/src/main/java/store/auth/RegisterIn.java) |
+| **TokenOut.java** | DTO de saída contendo o token JWT | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/auth/refs/heads/main/src/main/java/store/auth/TokenOut.java) |
 
 ```{ bash }
 > mvn clean install
@@ -152,63 +121,17 @@ api/
         Jenkinsfile
 ```
 
-??? info "Source"
-
-````
-=== "pom.xml"
-
-    ``` { .yaml .copy .select linenums="1" }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/auth-service/refs/heads/main/pom.xml"
-    ```
-
-=== "Dockerfile"
-
-    ``` { .java .copy .select linenums='1' }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/auth-service/refs/heads/main/DockerFile"
-    ```
-
-=== "Jenkinsfile"
-
-    ``` { .jenkinsfile .copy .select linenums="1" }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/auth-service/refs/heads/main/Jenkinsfile"
-    ```
-
-=== "k8s.yaml"
-
-    ``` { .yaml .copy .select linenums="1" }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/auth-service/refs/heads/main/k8s/k8s.yaml"
-    ```
-
-=== "application.yaml"
-
-    ``` { .yaml .copy .select linenums="1" }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/auth-service/refs/heads/main/src/main/resources/application.yaml"
-    ```
-
-=== "AuthApplication.java"
-
-    ``` { .java .copy .select linenums='1' }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/auth-service/refs/heads/main/src/main/java/store/auth/AuthApplication.java"
-    ```
-
-=== "AuthResource.java"
-
-    ``` { .java .copy .select linenums='1' }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/auth-service/refs/heads/main/src/main/java/store/auth/AuthResource.java"
-    ```
-
-=== "AuthService.java"
-
-    ``` { .java .copy .select linenums='1' }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/auth-service/refs/heads/main/src/main/java/store/auth/AuthService.java"
-    ```
-
-=== "JwtService.java"
-
-    ``` { .java .copy .select linenums='1' }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/auth-service/refs/heads/main/src/main/java/store/auth/JwtService.java"
-    ```
-````
+| Arquivo | Descrição | Link |
+| :--- | :--- | :--- |
+| **pom.xml** | Configuração do Maven para o serviço de autenticação | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/auth-service/refs/heads/main/pom.xml) |
+| **Dockerfile** | Container Docker para deploy | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/auth-service/refs/heads/main/DockerFile) |
+| **Jenkinsfile** | Pipeline de CI/CD do serviço | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/auth-service/refs/heads/main/Jenkinsfile) |
+| **k8s.yaml** | Manifesto Kubernetes para deploy | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/auth-service/refs/heads/main/k8s/k8s.yaml) |
+| **application.yaml** | Configurações da aplicação Spring Boot | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/auth-service/refs/heads/main/src/main/resources/application.yaml) |
+| **AuthApplication.java** | Classe principal da aplicação Spring Boot | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/auth-service/refs/heads/main/src/main/java/store/auth/AuthApplication.java) |
+| **AuthResource.java** | Controller REST para autenticação | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/auth-service/refs/heads/main/src/main/java/store/auth/AuthResource.java) |
+| **AuthService.java** | Lógica de negócio de autenticação | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/auth-service/refs/heads/main/src/main/java/store/auth/AuthService.java) |
+| **JwtService.java** | Serviço para geração e validação de JWT | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/auth-service/refs/heads/main/src/main/java/store/auth/JwtService.java) |
 
 ```{ bash }
 > mvn clean package spring-boot:run

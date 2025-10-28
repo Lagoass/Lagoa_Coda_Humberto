@@ -74,32 +74,12 @@ api/
         Dockerfile
 ```
 
-??? info "Source"
-
-    === "requirements.txt"
-
-        `{ .txt .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/exchange-service/refs/heads/main/requirements.txt"        `
-
-    === "Dockerfile"
-
-        `{ .dockerfile .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/exchange-service/refs/heads/main/DockerFile"        `
-
-    === "main.py"
-
-        `{ .python .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/exchange-service/refs/heads/main/app/main.py"        `
-
-    === "auth.py"
-
-        `{ .python .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/exchange-service/refs/heads/main/app/auth.py"        `
-
-    === "config.py"
-
-        `{ .python .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/exchange-service/refs/heads/main/app/config.py"        `
-
-    === "models.py"
-
-        `{ .python .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/exchange-service/refs/heads/main/app/models.py"        `
-
-    === "clients/rates.py"
-
-        `{ .python .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/exchange-service/refs/heads/main/app/clients/rates.py"        `
+| Arquivo | Descrição | Link |
+| :--- | :--- | :--- |
+| **requirements.txt** | Dependências Python do projeto FastAPI | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/exchange-service/refs/heads/main/requirements.txt) |
+| **Dockerfile** | Container Docker para deploy | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/exchange-service/refs/heads/main/DockerFile) |
+| **main.py** | Aplicação principal FastAPI | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/exchange-service/refs/heads/main/app/main.py) |
+| **auth.py** | Módulo de autenticação JWT | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/exchange-service/refs/heads/main/app/auth.py) |
+| **config.py** | Configurações da aplicação | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/exchange-service/refs/heads/main/app/config.py) |
+| **models.py** | Modelos Pydantic (DTOs) | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/exchange-service/refs/heads/main/app/models.py) |
+| **clients/rates.py** | Cliente HTTP para API de cotações externas | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/exchange-service/refs/heads/main/app/clients/rates.py) |

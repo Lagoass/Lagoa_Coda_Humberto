@@ -81,47 +81,18 @@ api
         Jenkinsfile
 ```
 
-??? info "Source"
-
-    === "pom.xml"
-
-        `{ .yaml .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/gateway-service/refs/heads/main/pom.xml"        `
-
-    === "Dockerfile"
-
-        `{ .dockerfile .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/gateway-service/refs/heads/main/DockerFile"        `
-
-    === "Jenkinsfile"
-
-        `{ .jenkinsfile .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/gateway-service/refs/heads/main/Jenkinsfile"        `
-
-    === "k8s.yaml"
-
-        `{ .yaml .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/gateway-service/refs/heads/main/k8s/k8s.yaml"        `
-
-    === "application.yaml"
-
-        `{ .yaml .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/gateway-service/refs/heads/main/src/main/resources/application.yaml"        `
-
-    === "GatewayApplication.java"
-
-        `{ .java .copy .select linenums='1' }         --8<-- "https://raw.githubusercontent.com/Lagoass/gateway-service/refs/heads/main/src/main/java/store/gateway/GatewayApplication.java"        `
-
-    === "GatewayResource.java"
-
-        `{ .java .copy .select linenums='1' }         --8<-- "https://raw.githubusercontent.com/Lagoass/gateway-service/refs/heads/main/src/main/java/store/gateway/GatewayResource.java"        `
-
-    === "CorsFilter.java"
-
-        `{ .java .copy .select linenums='1' }         --8<-- "https://raw.githubusercontent.com/Lagoass/gateway-service/refs/heads/main/src/main/java/store/gateway/security/CorsFilter.java"        `
-
-    === "AuthorizationFilter.java"
-
-        `{ .java .copy .select linenums='1' }         --8<-- "https://raw.githubusercontent.com/Lagoass/gateway-service/refs/heads/main/src/main/java/store/gateway/security/AuthorizationFilter.java"        `
-
-    === "RouterValidator.java"
-
-        `{ .java .copy .select linenums='1' }         --8<-- "https://raw.githubusercontent.com/Lagoass/gateway-service/refs/heads/main/src/main/java/store/gateway/security/RouterValidator.java"        `
+| Arquivo (Título do Tab) | Linguagem | URL do Arquivo Remoto (`--8<--`) |
+| :--- | :--- | :--- |
+| **pom.xml** | `.xml` | `https://raw.githubusercontent.com/Lagoass/gateway-service/refs/heads/main/pom.xml` |
+| **Dockerfile** | `.dockerfile` | `https://raw.githubusercontent.com/Lagoass/gateway-service/refs/heads/main/DockerFile` |
+| **Jenkinsfile** | `.jenkinsfile` | `https://raw.githubusercontent.com/Lagoass/gateway-service/refs/heads/main/Jenkinsfile` |
+| **k8s.yaml** | `.yaml` | `https://raw.githubusercontent.com/Lagoass/gateway-service/refs/heads/main/k8s/k8s.yaml` |
+| **application.yaml** | `.yaml` | `https://raw.githubusercontent.com/Lagoass/gateway-service/refs/heads/main/src/main/resources/application.yaml` |
+| **GatewayApplication.java** | `.java` | `https://raw.githubusercontent.com/Lagoass/gateway-service/refs/heads/main/src/main/java/store/gateway/GatewayApplication.java` |
+| **GatewayResource.java** | `.java` | `https://raw.githubusercontent.com/Lagoass/gateway-service/refs/heads/main/src/main/java/store/gateway/GatewayResource.java` |
+| **CorsFilter.java** | `.java` | `https://raw.githubusercontent.com/Lagoass/gateway-service/refs/heads/main/src/main/java/store/gateway/security/CorsFilter.java` |
+| **AuthorizationFilter.java** | `.java` | `https://raw.githubusercontent.com/Lagoass/gateway-service/refs/heads/main/src/main/java/store/gateway/security/AuthorizationFilter.java` |
+| **RouterValidator.java** | `.java` | `https://raw.githubusercontent.com/Lagoass/gateway-service/refs/heads/main/src/main/java/store/gateway/security/RouterValidator.java` |
 
 ```{ bash }
 > mvn clean package spring-boot:run

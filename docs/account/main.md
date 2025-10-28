@@ -65,37 +65,13 @@ api/
         Jenkinsfile
 ```
 
-??? info "Source"
-
-    === "pom.xml"
-
-      ```{ .xml .copy .select linenums="1" }
-      --8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/pom.xml"
-      ```
-
-    === "Jenkinsfile"
-
-      ```{ .jenkinsfile .copy .select linenums="1" }
-      --8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/Jenkinsfile"
-      ```
-
-    === "AccountController"
-
-      ```{ .java title='AccountController.java' .copy .select linenums='1' }
-      --8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/src/main/java/store/account/AccountController.java"
-      ```
-
-    === "AccountIn"
-
-      ```{ .java title='AccountIn.java' .copy .select linenums='1' }
-      --8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/src/main/java/store/account/AccountIn.java"
-      ```
-
-    === "AccountOut"
-
-      ```{ .java title='AccountOut.java' .copy .select linenums='1' }
-      --8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/src/main/java/store/account/AccountOut.java"
-      ```
+| Arquivo | Descrição | Link |
+| :--- | :--- | :--- |
+| **pom.xml** | Configuração do Maven para o módulo de contrato | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/pom.xml) |
+| **Jenkinsfile** | Pipeline de CI/CD do módulo de contrato | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/Jenkinsfile) |
+| **AccountController.java** | Interface Feign para comunicação entre serviços | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/src/main/java/store/account/AccountController.java) |
+| **AccountIn.java** | DTO de entrada para operações de conta | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/src/main/java/store/account/AccountIn.java) |
+| **AccountOut.java** | DTO de saída para operações de conta | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/src/main/java/store/account/AccountOut.java) |
 
 ```{ bash }
 > mvn clean install
@@ -134,97 +110,23 @@ api/
         Jenkinsfile
 ```
 
-??? info "Source"
-
-    === "pom.xml"
-
-    ```{ .xml .copy .select linenums='1' title="pom.xml" }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/pom.xml"
-    ```
-
-    === "Dockerfile"
-
-    ```{ .dockerfile .copy .select linenums='1' title="Dockerfile" }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/DockerFile"
-    ```
-
-    === "Jenkinsfile"
-
-    ```{ .jenkinsfile .copy .select linenums='1' title="Jenkinsfile" }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/Jenkinsfile"
-    ```
-
-    === "k8s.yaml"
-
-    ```{ .yaml .copy .select linenums='1' title="k8s.yaml" }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/k8s/k8s.yaml"
-    ```
-
-    === "application.yaml"
-
-    ```{ .yaml .copy .select linenums='1' title="application.yaml" }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/resources/application.yaml"
-    ```
-
-    === "Account.java"
-
-    ```{ .java .copy .select linenums='1' title="Account.java" }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/Account.java"
-    ```
-
-    === "AccountApplication.java"
-
-    ```{ .java .copy .select linenums='1' title="AccountApplication.java" }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/AccountApplication.java"
-    ```
-
-    === "AccountModel.java"
-
-    ```{ .java .copy .select linenums='1' title="AccountModel.java" }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/AccountModel.java"
-    ```
-
-    === "AccountParser.java"
-
-    ```{ .java .copy .select linenums='1' title="AccountParser.java" }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/AccountParser.java"
-    ```
-
-    === "AccountRepository.java"
-
-    ```{ .java .copy .select linenums='1' title="AccountRepository.java" }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/AccountRepository.java"
-    ```
-
-    === "AccountResource.java"
-
-    ```{ .java .copy .select linenums='1' title="AccountResource.java" }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/AccountResource.java"
-    ```
-
-    === "AccountService.java"
-
-    ```{ .java .copy .select linenums='1' title="AccountService.java" }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/AccountService.java"
-    ```
-
-    === "V2025.08.29.001__create_schema.sql"
-
-    ```{ .sql .copy .select linenums='1' title="V2025.08.29.001__create_schema.sql" }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/resources/db/migration/V2025.08.29.001__create_schema.sql"
-    ```
-
-    === "V2025.08.29.002__create_table_account.sql"
-
-    ```{ .sql .copy .select linenums='1' title="V2025.08.29.002__create_table_account.sql" }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/resources/db/migration/V2025.08.29.002__create_table_account.sql"
-    ```
-
-    === "V2025.09.02.001__create_index_email.sql"
-
-    ```{ .sql .copy .select linenums='1' title="V2025.09.02.001__create_index_email.sql" }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/resources/db/migration/V2025.09.02.001__create_index_email.sql"
-    ```
+| Arquivo | Descrição | Link |
+| :--- | :--- | :--- |
+| **pom.xml** | Configuração do Maven para o serviço principal | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/pom.xml) |
+| **Dockerfile** | Container Docker para deploy | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/DockerFile) |
+| **Jenkinsfile** | Pipeline de CI/CD do serviço | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/Jenkinsfile) |
+| **k8s.yaml** | Manifesto Kubernetes para deploy | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/k8s/k8s.yaml) |
+| **application.yaml** | Configurações da aplicação Spring Boot | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/resources/application.yaml) |
+| **Account.java** | Entidade de domínio Account | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/Account.java) |
+| **AccountApplication.java** | Classe principal da aplicação Spring Boot | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/AccountApplication.java) |
+| **AccountModel.java** | Modelo de dados JPA | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/AccountModel.java) |
+| **AccountParser.java** | Conversor entre entidade e DTO | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/AccountParser.java) |
+| **AccountRepository.java** | Repositório JPA para persistência | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/AccountRepository.java) |
+| **AccountResource.java** | Controller REST | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/AccountResource.java) |
+| **AccountService.java** | Lógica de negócio do serviço | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/java/store/account/AccountService.java) |
+| **V2025.08.29.001__create_schema.sql** | Migração Flyway - Criação do schema | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/resources/db/migration/V2025.08.29.001__create_schema.sql) |
+| **V2025.08.29.002__create_table_account.sql** | Migração Flyway - Criação da tabela account | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/resources/db/migration/V2025.08.29.002__create_table_account.sql) |
+| **V2025.09.02.001__create_index_email.sql** | Migração Flyway - Índice para email | [:octicons-link-external-16:](https://raw.githubusercontent.com/Lagoass/account-service/refs/heads/main/src/main/resources/db/migration/V2025.09.02.001__create_index_email.sql) |
 
 ```{ bash }
 > mvn clean package spring-boot:run

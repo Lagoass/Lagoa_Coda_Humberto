@@ -63,27 +63,13 @@ api/
         Jenkinsfile
 ```
 
-??? info "Source"
-
-    === "pom.xml"
-
-        `{ .yaml .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/product/refs/heads/main/pom.xml"        `
-
-    === "Jenkinsfile"
-
-        `{ .jenkinsfile .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/product/refs/heads/main/Jenkinsfile"        `
-
-    === "ProductController"
-
-        `{ .java title='ProductController.java' .copy .select linenums='1' }         --8<-- "https://raw.githubusercontent.com/Lagoass/product/refs/heads/main/src/main/java/store/product/ProductController.java"        `
-
-    === "ProductIn"
-
-        `{ .java title='ProductIn.java' .copy .select linenums='1' }         --8<-- "https://raw.githubusercontent.com/Lagoass/product/refs/heads/main/src/main/java/store/product/ProductIn.java"        `
-
-    === "ProductOut"
-
-        `{ .java title='ProductOut.java' .copy .select linenums='1' }         --8<-- "https://raw.githubusercontent.com/Lagoass/product/refs/heads/main/src/main/java/store/product/ProductOut.java"        `
+| Arquivo (Título do Tab) | Linguagem | URL do Arquivo Remoto (`--8<--`) |
+| :--- | :--- | :--- |
+| **pom.xml** | `.xml` | `https://raw.githubusercontent.com/Lagoass/product/refs/heads/main/pom.xml` |
+| **Jenkinsfile** | `.jenkinsfile` | `https://raw.githubusercontent.com/Lagoass/product/refs/heads/main/Jenkinsfile` |
+| **ProductController** | `.java` | `https://raw.githubusercontent.com/Lagoass/product/refs/heads/main/src/main/java/store/product/ProductController.java` |
+| **ProductIn** | `.java` | `https://raw.githubusercontent.com/Lagoass/product/refs/heads/main/src/main/java/store/product/ProductIn.java` |
+| **ProductOut** | `.java` | `https://raw.githubusercontent.com/Lagoass/product/refs/heads/main/src/main/java/store/product/ProductOut.java` |
 
 ```{ bash }
 > mvn clean install
@@ -122,67 +108,23 @@ api/
         Jenkinsfile
 ```
 
-??? info "Source"
-
-    === "pom.xml"
-
-        `{ .yaml .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/pom.xml"        `
-
-    === "Dockerfile"
-
-        `{ .dockerfile .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/DockerFile"        `
-
-    === "Jenkinsfile"
-
-        `{ .jenkinsfile .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/Jenkinsfile"        `
-
-    === "k8s.yaml"
-
-        `{ .yaml .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/k8s/k8s.yaml"        `
-
-    === "application.yaml"
-
-        `{ .yaml .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/src/main/resources/application.yaml"        `
-
-    === "Product.java"
-
-        `{ .java .copy .select linenums='1' }         --8<-- "https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/src/main/java/store/product/Product.java"        `
-
-    === "ProductApplication.java"
-
-        `{ .java .copy .select linenums='1' }         --8<-- "https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/src/main/java/store/product/ProductApplication.java"        `
-
-    === "ProductModel.java"
-
-        `{ .java .copy .select linenums='1' }         --8<-- "https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/src/main/java/store/product/ProductModel.java"        `
-
-    === "ProductParser.java"
-
-        `{ .java .copy .select linenums='1' }         --8<-- "https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/src/main/java/store/product/ProductParser.java"        `
-
-    === "ProductRepository.java"
-
-        `{ .java .copy .select linenums='1' }         --8<-- "https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/src/main/java/store/product/ProductRepository.java"        `
-
-    === "ProductResource.java"
-
-        `{ .java .copy .select linenums='1' }         --8<-- "https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/src/main/java/store/product/ProductResource.java"        `
-
-    === "ProductService.java"
-
-        `{ .java .copy .select linenums='1' }         --8<-- "https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/src/main/java/store/product/ProductService.java"        `
-
-    === "RedisCacheConfig.java"
-
-        `{ .java .copy .select linenums='1' }         --8<-- "https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/src/main/java/store/product/RedisCacheConfig.java"        `
-
-    === "V2025.08.29.001\_\_create\_schema.sql"
-
-        `{ .sql .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/src/main/resources/db/migration/V2025.08.29.001__create_schema.sql"        `
-
-    === "V2025.08.29.002\_\_create\_table\_product.sql"
-
-        `{ .sql .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/src/main/resources/db/migration/V2025.08.29.002__create_table_product.sql"        `
+| Arquivo (Título do Tab) | Linguagem | URL do Arquivo Remoto (`--8<--`) |
+| :--- | :--- | :--- |
+| **pom.xml** | `.xml` | `https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/pom.xml` |
+| **Dockerfile** | `.dockerfile` | `https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/DockerFile` |
+| **Jenkinsfile** | `.jenkinsfile` | `https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/Jenkinsfile` |
+| **k8s.yaml** | `.yaml` | `https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/k8s/k8s.yaml` |
+| **application.yaml** | `.yaml` | `https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/src/main/resources/application.yaml` |
+| **Product.java** | `.java` | `https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/src/main/java/store/product/Product.java` |
+| **ProductApplication.java** | `.java` | `https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/src/main/java/store/product/ProductApplication.java` |
+| **ProductModel.java** | `.java` | `https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/src/main/java/store/product/ProductModel.java` |
+| **ProductParser.java** | `.java` | `https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/src/main/java/store/product/ProductParser.java` |
+| **ProductRepository.java** | `.java` | `https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/src/main/java/store/product/ProductRepository.java` |
+| **ProductResource.java** | `.java` | `https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/src/main/java/store/product/ProductResource.java` |
+| **ProductService.java** | `.java` | `https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/src/main/java/store/product/ProductService.java` |
+| **RedisCacheConfig.java** | `.java` | `https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/src/main/java/store/product/RedisCacheConfig.java` |
+| **V2025.08.29.001__create_schema.sql** | `.sql` | `https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/src/main/resources/db/migration/V2025.08.29.001__create_schema.sql` |
+| **V2025.08.29.002__create_table_product.sql** | `.sql` | `https://raw.githubusercontent.com/Lagoass/product-service/refs/heads/main/src/main/resources/db/migration/V2025.08.29.002__create_table_product.sql` |
 
 ```{ bash }
 > mvn clean package spring-boot:run

@@ -81,28 +81,15 @@ api/
         Jenkinsfile
 ```
 
-??? info "Source"
-
-    === "pom.xml"
-        `{ .yaml .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/order/refs/heads/main/pom.xml"        `
-
-    === "Jenkinsfile"
-        `{ .jenkinsfile .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/order/refs/heads/main/Jenkinsfile"        `
-
-    === "OrderController.java"
-        `{ .java .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/order/refs/heads/main/src/main/java/store/order/OrderController.java"        `
-
-    === "OrderIn.java"
-        `{ .java .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/order/refs/heads/main/src/main/java/store/order/OrderIn.java"        `
-
-    === "OrderOut.java"
-        `{ .java .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/order/refs/heads/main/src/main/java/store/order/OrderOut.java"        `
-
-    === "OrderItemIn.java"
-        `{ .java .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/order/refs/heads/main/src/main/java/store/order/OrderItemIn.java"        `
-
-    === "OrderItemOut.java"
-        `{ .java .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/order/refs/heads/main/src/main/java/store/order/OrderItemOut.java"        `
+| Arquivo (Título do Tab) | Linguagem | URL do Arquivo Remoto (`--8<--`) |
+| :--- | :--- | :--- |
+| **pom.xml** | `.xml` | `https://raw.githubusercontent.com/Lagoass/order/refs/heads/main/pom.xml` |
+| **Jenkinsfile** | `.jenkinsfile` | `https://raw.githubusercontent.com/Lagoass/order/refs/heads/main/Jenkinsfile` |
+| **OrderController.java** | `.java` | `https://raw.githubusercontent.com/Lagoass/order/refs/heads/main/src/main/java/store/order/OrderController.java` |
+| **OrderIn.java** | `.java` | `https://raw.githubusercontent.com/Lagoass/order/refs/heads/main/src/main/java/store/order/OrderIn.java` |
+| **OrderOut.java** | `.java` | `https://raw.githubusercontent.com/Lagoass/order/refs/heads/main/src/main/java/store/order/OrderOut.java` |
+| **OrderItemIn.java** | `.java` | `https://raw.githubusercontent.com/Lagoass/order/refs/heads/main/src/main/java/store/order/OrderItemIn.java` |
+| **OrderItemOut.java** | `.java` | `https://raw.githubusercontent.com/Lagoass/order/refs/heads/main/src/main/java/store/order/OrderItemOut.java` |
 
 ```{ bash }
 > mvn clean install
@@ -143,52 +130,23 @@ api/
         Jenkinsfile
 ```
 
-??? info "Source"
-
-    === "pom.xml"
-        `{ .yaml .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/pom.xml"        `
-
-    === "Dockerfile"
-        `{ .dockerfile .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/DockerFile"        `
-
-    === "Jenkinsfile"
-        `{ .jenkinsfile .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/Jenkinsfile"        `
-
-    === "k8s.yaml"
-        `{ .yaml .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/k8s/k8s.yaml"        `
-
-    === "application.yaml"
-        `{ .yaml .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/src/main/resources/application.yaml"        `
-
-    === "Order.java"
-        `{ .java .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/src/main/java/store/order/Order.java"        `
-
-    === "OrderItem.java"
-        `{ .java .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/src/main/java/store/order/OrderItem.java"        `
-
-    === "OrderApplication.java"
-        `{ .java .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/src/main/java/store/order/OrderApplication.java"        `
-
-    === "OrderService.java"
-        `{ .java .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/src/main/java/store/order/OrderService.java"        `
-
-    === "OrderResource.java"
-        `{ .java .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/src/main/java/store/order/OrderResource.java"        `
-
-    === "OrderRepository.java"
-        `{ .java .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/src/main/java/store/order/OrderRepository.java"        `
-
-    === "FeignAuthInterceptor.java"
-        `{ .java .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/src/main/java/store/order/FeignAuthInterceptor.java"        `
-
-    === "V2025.08.29.001\_\_create\_schema.sql"
-        `{ .sql .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/src/main/resources/db/migration/V2025.08.29.001__create_schema.sql"        `
-
-    === "V2025.08.29.002\_\_create\_table\_order.sql"
-        `{ .sql .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/src/main/resources/db/migration/V2025.08.29.002__create_table_order.sql"        `
-
-    === "V2025.08.29.003\_\_create\_table\_order\_item.sql"
-        `{ .sql .copy .select linenums="1" }         --8<-- "https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/src/main/resources/db/migration/V2025.08.29.003__create_table_order_item.sql"        `
+| Arquivo (Título do Tab) | Linguagem | URL do Arquivo Remoto (`--8<--`) |
+| :--- | :--- | :--- |
+| **pom.xml** | `.xml` | `https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/pom.xml` |
+| **Dockerfile** | `.dockerfile` | `https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/DockerFile` |
+| **Jenkinsfile** | `.jenkinsfile` | `https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/Jenkinsfile` |
+| **k8s.yaml** | `.yaml` | `https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/k8s/k8s.yaml` |
+| **application.yaml** | `.yaml` | `https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/src/main/resources/application.yaml` |
+| **Order.java** | `.java` | `https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/src/main/java/store/order/Order.java` |
+| **OrderItem.java** | `.java` | `https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/src/main/java/store/order/OrderItem.java` |
+| **OrderApplication.java** | `.java` | `https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/src/main/java/store/order/OrderApplication.java` |
+| **OrderService.java** | `.java` | `https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/src/main/java/store/order/OrderService.java` |
+| **OrderResource.java** | `.java` | `https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/src/main/java/store/order/OrderResource.java` |
+| **OrderRepository.java** | `.java` | `https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/src/main/java/store/order/OrderRepository.java` |
+| **FeignAuthInterceptor.java** | `.java` | `https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/src/main/java/store/order/FeignAuthInterceptor.java` |
+| **V2025.08.29.001__create_schema.sql** | `.sql` | `https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/src/main/resources/db/migration/V2025.08.29.001__create_schema.sql` |
+| **V2025.08.29.002__create_table_order.sql** | `.sql` | `https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/src/main/resources/db/migration/V2025.08.29.002__create_table_order.sql` |
+| **V2025.08.29.003__create_table_order_item.sql** | `.sql` | `https://raw.githubusercontent.com/Lagoass/order-service/refs/heads/main/src/main/resources/db/migration/V2025.08.29.003__create_table_order_item.sql` |
 
 ```{ bash }
 > mvn clean package spring-boot:run
