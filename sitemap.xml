@@ -2,42 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://Lagoass.github.io/Lagoa_Coda_Humberto/</loc>
-         <lastmod>2025-09-22</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
-         <loc>https://Lagoass.github.io/Lagoa_Coda_Humberto/notebook1/ex1_data/</loc>
-         <lastmod>2025-09-22</lastmod>
+         <loc>https://Lagoass.github.io/Lagoa_Coda_Humberto/account/main/</loc>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
-         <loc>https://Lagoass.github.io/Lagoa_Coda_Humberto/projeto/main/</loc>
-         <lastmod>2025-09-22</lastmod>
+         <loc>https://Lagoass.github.io/Lagoa_Coda_Humberto/auth/main/</loc>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
-         <loc>https://Lagoass.github.io/Lagoa_Coda_Humberto/roteiro1/main/</loc>
-         <lastmod>2025-09-22</lastmod>
+         <loc>https://Lagoass.github.io/Lagoa_Coda_Humberto/bottlenecks/main/</loc>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
-         <loc>https://Lagoass.github.io/Lagoa_Coda_Humberto/roteiro2/main/</loc>
-         <lastmod>2025-09-22</lastmod>
+         <loc>https://Lagoass.github.io/Lagoa_Coda_Humberto/exchange/main/</loc>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
-         <loc>https://Lagoass.github.io/Lagoa_Coda_Humberto/roteiro3/main/</loc>
-         <lastmod>2025-09-22</lastmod>
+         <loc>https://Lagoass.github.io/Lagoa_Coda_Humberto/gateway/main/</loc>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
-         <loc>https://Lagoass.github.io/Lagoa_Coda_Humberto/roteiro4/limit.def/</loc>
-         <lastmod>2025-09-22</lastmod>
+         <loc>https://Lagoass.github.io/Lagoa_Coda_Humberto/jenkins/main/</loc>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
-         <loc>https://Lagoass.github.io/Lagoa_Coda_Humberto/roteiro4/main/</loc>
-         <lastmod>2025-09-22</lastmod>
+         <loc>https://Lagoass.github.io/Lagoa_Coda_Humberto/kubernets/main/</loc>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
-         <loc>https://Lagoass.github.io/Lagoa_Coda_Humberto/roteiro4/smc/</loc>
-         <lastmod>2025-09-22</lastmod>
+         <loc>https://Lagoass.github.io/Lagoa_Coda_Humberto/order/main/</loc>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
-         <loc>https://Lagoass.github.io/Lagoa_Coda_Humberto/thisdocumentation/main/</loc>
-         <lastmod>2025-09-22</lastmod>
+         <loc>https://Lagoass.github.io/Lagoa_Coda_Humberto/product/main/</loc>
+         <lastmod>2025-10-28</lastmod>
     </url>
 </urlset>
