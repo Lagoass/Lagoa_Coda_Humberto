@@ -4,16 +4,16 @@ O serviço **Account API** é o pilar para o gerenciamento de contas de usuário
 
 Este microsserviço realiza todas as **operações CRUD** (Criar, Ler, Atualizar, Excluir) essenciais para a **gestão de contas**, estabelecendo a fundação necessária para a **autenticação** e o relacionamento com outros serviços do ecossistema, como `auth`, `order` e `product`.
 
-* **Criação** (Cadastro)
-* **Busca** (Consulta)
-* **Atualização**
-* **Exclusão**
+  * **Criação** (Cadastro)
+  * **Busca** (Consulta)
+  * **Atualização**
+  * **Exclusão**
 
 > 🔒 **Camada de Confiança (*Trusted Layer*) e Roteamento Seguro**
 >
 > Todas as comunicações externas passam obrigatoriamente pelo **Gateway** da aplicação. As rotas sob `/account/**` são **protegidas por *token***, exigindo o envio do cabeçalho de autenticação: `Authorization: Bearer <jwt>`.
 
----
+-----
 
 ## 🏛️ Componentes e Estrutura
 
@@ -31,7 +31,7 @@ flowchart TD
     B --> D[Flyway: Migrações de DB];
     E[Outros Módulos] --> A;
     A -- Contrato (DTOs/Feign) --> B;
-````
+```
 
 -----
 
@@ -80,19 +80,19 @@ api/
 
 \=== "AccountController"
 
-```{ .java .copy .select linenums='1' title='AccountController.java' }
+```{ .java title='AccountController.java' .copy .select linenums='1' }
 --8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/src/main/java/store/account/AccountController.java"
 ```
 
 \=== "AccountIn"
 
-```{ .java .copy .select linenums='1' title='AccountIn.java' }
+```{ .java title='AccountIn.java' .copy .select linenums='1' }
 --8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/src/main/java/store/account/AccountIn.java"
 ```
 
 \=== "AccountOut"
 
-```{ .java .copy .select linenums='1' title='AccountOut.java' }
+```{ .java title='AccountOut.java' .copy .select linenums='1' }
 --8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/src/main/java/store/account/AccountOut.java"
 ```
 
