@@ -20,7 +20,7 @@ O **Jenkins** é o orquestrador da **Esteira de CI/CD** para todos os componente
 
 O painel de controle do Jenkins provê visibilidade imediata sobre o estado e os *runs* recentes das esteiras ativas:
 
-[Painel de Pipelines do Jenkins exibindo status de execução]
+![alt text](image.png)
 
 -----
 
