@@ -69,33 +69,33 @@ api/
 
     === "pom.xml"
 
-    ```{ .xml .copy .select linenums='1' title="pom.xml" }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/pom.xml"
-    ```
+      ```{ .xml .copy .select linenums="1" }
+      --8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/pom.xml"
+      ```
 
     === "Jenkinsfile"
 
-    ```{ .jenkinsfile .copy .select linenums='1' title="Jenkinsfile" }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/Jenkinsfile"
-    ```
+      ```{ .jenkinsfile .copy .select linenums="1" }
+      --8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/Jenkinsfile"
+      ```
 
     === "AccountController"
 
-    ```{ .java title='AccountController.java' .copy .select linenums='1' }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/src/main/java/store/account/AccountController.java"
-    ```
+      ```{ .java title='AccountController.java' .copy .select linenums='1' }
+      --8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/src/main/java/store/account/AccountController.java"
+      ```
 
     === "AccountIn"
 
-    ```{ .java title='AccountIn.java' .copy .select linenums='1' }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/src/main/java/store/account/AccountIn.java"
-    ```
+      ```{ .java title='AccountIn.java' .copy .select linenums='1' }
+      --8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/src/main/java/store/account/AccountIn.java"
+      ```
 
     === "AccountOut"
 
-    ```{ .java title='AccountOut.java' .copy .select linenums='1' }
-    --8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/src/main/java/store/account/AccountOut.java"
-    ```
+      ```{ .java title='AccountOut.java' .copy .select linenums='1' }
+      --8<-- "https://raw.githubusercontent.com/Lagoass/account/refs/heads/main/src/main/java/store/account/AccountOut.java"
+      ```
 
 ```{ bash }
 > mvn clean install
